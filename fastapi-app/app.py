@@ -79,7 +79,7 @@ async def update_video_by_id(
 
 
 @app.delete(
-    "/videos/{id}",
+    "/videos/{id}/",
     response_model=MessageResponse,
     tags=["videos"],
     responses={404: {"model": MessageResponse}},
