@@ -1,76 +1,82 @@
-Video Tracker API - Framework Comparison
+# Video Tracker API - Framework Comparison
+
 This repository contains implementations of the same Video Tracker API built with three different Python web frameworks:
 
-Flask with OpenAPI
-Django with Django REST Framework
-FastAPI
+- Flask with OpenAPI
+- Django with Django REST Framework
+- FastAPI
 
 Each implementation provides identical functionality while showcasing the unique patterns and benefits of each framework.
-Core Functionality
+
+## Core Functionality
+
 All implementations provide a RESTful API for tracking videos with the following features:
 
-Create, Read, Update, Delete (CRUD) operations for video entries
-CSV-based data storage for simplicity (no database required)
-Sorting by name, post date, or view count
-Input validation
-API documentation
-Proper error handling
+- Create, Read, Update, Delete (CRUD) operations for video entries
+- CSV-based data storage for simplicity (no database required)
+- Sorting by name, post date, or view count
+- Input validation
+- API documentation
+- Proper error handling
 
-Repository Structure
+## Repository Structure
+
+```
 video-tracker/
 ├── flask-implementation/      # Flask with OpenAPI implementation
 ├── django-implementation/     # Django with DRF implementation
 ├── fastapi-implementation/    # FastAPI implementation
 └── README.md                  # This file
-Comparing the Frameworks
-Flask with OpenAPI
-Pros:
+```
 
-Lightweight and minimal
-Explicit routing
-Flexible structure
-OpenAPI integration for API documentation
+## Comparing the Frameworks
 
-Characteristics:
+### Flask with OpenAPI
 
-Manual handling of request data
-Function-based views
-Manual serialization/deserialization with Pydantic
+**Pros:**
+- Lightweight and minimal
+- Explicit routing
+- Flexible structure
+- OpenAPI integration for API documentation
 
-Django with REST Framework
-Pros:
+**Characteristics:**
+- Manual handling of request data
+- Function-based views
+- Manual serialization/deserialization with Pydantic
 
-Rich ecosystem
-ViewSet-based API organization
-Built-in admin interface potential
-Class-based views
+### Django with REST Framework
 
-Characteristics:
+**Pros:**
+- Rich ecosystem
+- ViewSet-based API organization
+- Built-in admin interface potential
+- Class-based views
 
-Serializer classes for data validation
-Router-based URL configuration
-ViewSet pattern for CRUD operations
+**Characteristics:**
+- Serializer classes for data validation
+- Router-based URL configuration
+- ViewSet pattern for CRUD operations
 
-FastAPI
-Pros:
+### FastAPI
 
-Built-in OpenAPI documentation (Swagger UI)
-Automatic request/response validation
-High performance
-Concise code
+**Pros:**
+- Built-in OpenAPI documentation (Swagger UI)
+- Automatic request/response validation
+- High performance
+- Concise code
 
-Characteristics:
+**Characteristics:**
+- Path and query parameter type validation
+- Dependency injection
+- Type hints for validation
+- Asynchronous support
 
-Path and query parameter type validation
-Dependency injection
-Type hints for validation
-Asynchronous support
+## Implementation Notes
 
-Implementation Notes
+- Each implementation uses the same CSV file format
+- The API endpoints are nearly identical across implementations
+- Error handling follows the same patterns in all implementations
 
-Each implementation uses the same CSV file format
-The API endpoints are nearly identical across implementations
-Error handling follows the same patterns in all implementations
+## License
 
-License
 All implementations are licensed under the MIT License.
